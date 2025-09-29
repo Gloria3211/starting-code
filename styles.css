@@ -87,794 +87,1039 @@ p {
 .dark-theme .form-input,
 .dark-theme .form-select,
 .dark-theme .form-textarea {
-  /* TODO: Add dark theme form control styles */
-  /* HINT: Use background-color, color, and border-color */
+  background-color: #1e1e1e;
+  color: #f1f1f1;
+  border: 1px solid #444;
 }
 
 .dark-theme .table th {
-  /* TODO: Add dark theme table header styles */
-  /* HINT: Use background-color */
+  background-color: #2c2c2c;
+  color: #f1f1f1;
+  font-weight: 600;
+  padding: 0.75rem;
+  text-align: left;
+  border-bottom: 2px solid #444;
 }
-
 .dark-theme .code-editor {
-  /* TODO: Add dark theme code editor styles */
-  /* HINT: Use background-color */
+  background-color: #1e1e1e;  /* Dark background similar to VS Code */
+  color: #dcdcdc;             /* Light text for readability */
+  font-family: "Fira Code", monospace; /* Developer-friendly font */
+  font-size: 14px;
+  border-radius: 6px;
+  padding: 1rem;
+  margin: 1rem 0;
+  overflow-x: auto;
+  box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.5);
+  line-height: 1.5;
 }
-
-/* Card Styles */
 .card {
-  /* TODO: Add card styles */
-  /* HINT: Use background-color, border-radius, box-shadow, transition */
+  background-color: #ffffff;           /* Clean white background */
+  border-radius: 12px;                 /* Smooth rounded corners */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1); /* Soft shadow for depth */
+  transition: all 0.3s ease;           /* Smooth hover transition */
+  overflow: hidden;                    /* Ensures content stays inside */
 }
-
 .card:hover {
-  /* TODO: Add hover styles for card */
-  /* HINT: Use transform and box-shadow */
+  transform: translateY(-6px);               /* Slight lift effect */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* Stronger shadow on hover */
+  transition: all 0.3s ease;                 /* Smooth transition */
 }
 
 .card-img {
-  /* TODO: Add card image styles */
-  /* HINT: Set width, height, and object-fit */
+  width: 100%;              /* Make image span the full card width */
+  height: 200px;            /* Fixed height for uniform cards */
+  object-fit: cover;        /* Ensures image fills without distortion */
+  display: block;           /* Removes inline spacing below images */
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px; /* Match card’s rounded corners */
 }
-
 .card-content {
-  /* TODO: Add card content styles */
-  /* HINT: Add padding */
+  padding: 1rem 1.25rem;   /* Add space inside the card */
 }
 
 .card-title {
-  /* TODO: Add card title styles */
-  /* HINT: Set font-size, margin, and color */
+  font-size: 1.25rem;       /* Slightly larger for emphasis */
+  margin: 0 0 0.5rem 0;     /* Space below the title */
+  color: #333333;           /* Dark text for readability */
+  font-weight: 600;          /* Slightly bold for emphasis */
 }
 
 .card-text {
-  /* TODO: Add card text styles */
-  /* HINT: Set color and margin */
+  color: #555555;        /* Slightly lighter than title for hierarchy */
+  margin: 0 0 1rem 0;    /* Space below text for separation */
+  font-size: 0.95rem;    /* Slightly smaller than title */
+  line-height: 1.5;      /* Improve readability */
 }
 
-/* Button Styles */
+
 .btn {
-  /* TODO: Add button styles */
-  /* HINT: Use display, padding, background-color, color, border, border-radius, cursor, transition */
+  display: inline-block;            /* Makes the button respect padding and width */
+  padding: 0.5rem 1rem;            /* Comfortable spacing inside the button */
+  background-color: #0077b6;       /* Primary blue background */
+  color: #ffffff;                   /* White text */
+  border: 1px solid transparent;   /* Base border for consistency */
+  border-radius: 6px;               /* Rounded corners */
+  cursor: pointer;                  /* Pointer on hover */
+  font-size: 0.95rem;               /* Slightly smaller than default text */
+  font-weight: 500;                 /* Medium weight for readability */
+  text-align: center;               /* Center text */
+  transition: all 0.3s ease;        /* Smooth hover effect */
+  text-decoration: none;            /* Remove underline for links */
+}
+.btn:hover {
+  background-color: #005f87;  /* Darker blue on hover */
+  color: #ffffff;             /* Keep text white */
+  transform: translateY(-2px); /* Slight lift for interactivity */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow on hover */
+  transition: all 0.3s ease;  /* Smooth hover transition */
 }
 
-.btn:hover {
-  /* TODO: Add button hover styles */
-  /* HINT: Change background-color */
-}
 
 .btn-success {
-  /* TODO: Add success button styles */
-  /* HINT: Change background-color */
+  background-color: #28a745;  /* Green background for success */
+  color: #ffffff;             /* White text */
+  border: 1px solid transparent;
 }
 
+.btn-success:hover {
+  background-color: #218838;  /* Darker green on hover */
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+
 .btn-warning {
-  /* TODO: Add warning button styles */
-  /* HINT: Change background-color */
+  background-color: #ffc107;  /* Amber/yellow background for warning */
+  color: #212529;             /* Dark text for readability */
+  border: 1px solid transparent;
+}
+
+.btn-warning:hover {
+  background-color: #e0a800;  /* Darker amber on hover */
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+
+.btn-info {
+  background-color: #17a2b8;  /* Teal/blue background for info */
+  color: #ffffff;             /* White text for readability */
+  border: 1px solid transparent;
+}
+
+.btn-info:hover {
+  background-color: #138496;  /* Darker teal on hover */
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
 }
 
 .btn-info {
-  /* TODO: Add info button styles */
-  /* HINT: Change background-color */
+  background-color: #17a2b8;  /* Teal/blue background for info */
+  color: #ffffff;             /* White text for readability */
+  border: 1px solid transparent;
 }
 
-.btn-outline {
-  /* TODO: Add outline button styles */
-  /* HINT: Transparent background with border and specific text color */
+.btn-info:hover {
+  background-color: #138496;  /* Darker teal on hover */
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
 }
 
 .btn-outline:hover {
-  /* TODO: Add hover styles for outline button */
-  /* HINT: Change background-color and text color */
+  background-color: #007BFF; /* Change to your desired background color */
+  color: #FFFFFF; /* Change text color on hover */
+  border-color: #007BFF; /* Optional: keep border matching the hover color */
+  transition: 0.3s ease; /* Smooth transition effect */
+  cursor: pointer; /* Optional: shows pointer on hover */
 }
+
 
 .btn-group {
-  /* TODO: Add button group styles */
-  /* HINT: Use display and gap */
+  display: flex;       /* Arrange buttons in a row */
+  gap: 10px;           /* Space between buttons */
+  flex-wrap: wrap;     /* Optional: wrap buttons on smaller screens */
 }
 
-/* Chip Styles */
+
 .chips-container {
-  /* TODO: Add chips container styles */
-  /* HINT: Use display, flex-wrap, gap, and margin */
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 10px 0;
 }
-
-.chip {
-  /* TODO: Add chip styles */
-  /* HINT: Use display, align-items, padding, background-color, border-radius, font-size, color, and cursor */
+.chips-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 10px 0;
 }
 
 .chip.active {
-  /* TODO: Add active chip styles */
-  /* HINT: Change background-color and color */
+  background-color: #007bff;
+  color: #fff;
 }
 
 .chip i {
-  /* TODO: Add icon styles within chips */
-  /* HINT: Use margin-right */
+  margin-right: 5px;
 }
-
 .chip .close {
-  /* TODO: Add close button styles within chips */
-  /* HINT: Use margin-left, cursor, and font-weight */
+  margin-left: 8px;
+  cursor: pointer;
+  font-weight: bold;
 }
 
-/* Slider Styles */
 .slider-container {
-  /* TODO: Add slider container styles */
-  /* HINT: Use margin */
+  margin: 15px 0;
 }
 
 .slider {
-  /* TODO: Add slider styles */
-  /* HINT: Use appearance, width, height, border-radius, background, and outline */
+  -webkit-appearance: none;
+  width: 100%;
+  height: 6px;
+  border-radius: 5px;
+  background: #ddd;
+  outline: none;
 }
 
+
 .slider::-webkit-slider-thumb {
-  /* TODO: Add slider thumb styles */
-  /* HINT: Use appearance, width, height, border-radius, background, cursor, and transition */
+  -webkit-appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #007bff;
+  cursor: pointer;
+  transition: 0.3s;
 }
 
 .slider::-webkit-slider-thumb:hover {
-  /* TODO: Add hover styles for slider thumb */
-  /* HINT: Use background and transform */
+  background: #0056b3;
+  transform: scale(1.1);
 }
 
 .slider-value {
-  /* TODO: Add slider value styles */
-  /* HINT: Use text-align, font-weight, and color */
+  text-align: center;
+  font-weight: bold;
+  color: #333;
 }
 
-/* Switch Styles */
 .switch-container {
-  /* TODO: Add switch container styles */
-  /* HINT: Use display, align-items, and margin */
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+}
+
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 24px;
+  margin-right: 10px;
 }
 
 .switch {
-  /* TODO: Add switch styles */
-  /* HINT: Use position, display, width, height, and margin-right */
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 24px;
+  margin-right: 10px;
 }
 
-.switch input {
-  /* TODO: Add switch input styles */
-  /* HINT: Use opacity, width, and height */
-}
 
 .slider-round {
-  /* TODO: Add slider round styles */
-  /* HINT: Use position, cursor, top/left/right/bottom properties, background-color, transition, and border-radius */
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 24px;
 }
 
 .slider-round:before {
-  /* TODO: Add slider round before element styles */
-  /* HINT: Use position, content, height, width, left, bottom, background-color, transition, and border-radius */
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 20px;
+  left: 2px;
+  bottom: 2px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
 }
 
 input:checked + .slider-round {
-  /* TODO: Add checked slider round styles */
-  /* HINT: Change background-color */
+  background-color: #007bff;
 }
 
 input:checked + .slider-round:before {
-  /* TODO: Add checked slider round before element styles */
-  /* HINT: Use transform with translateX */
+  transform: translateX(26px);
 }
 
-/* List Styles */
 .list {
-  /* TODO: Add list styles */
-  /* HINT: Use list-style-type, background-color, border-radius, overflow, and box-shadow */
+  list-style-type: none;
+  background-color: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  padding: 0;
+  margin: 10px 0;
+}
+.list-item {
+  padding: 10px 15px;
+  border-bottom: 1px solid #eee;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  transition: background-color 0.3s;
 }
 
-.list-item {
-  /* TODO: Add list item styles */
-  /* HINT: Use padding, border-bottom, display, align-items, cursor, and transition */
-}
+
 
 .list-item:last-child {
-  /* TODO: Add styles for last list item */
-  /* HINT: Remove border-bottom */
+  border-bottom: none;
 }
 
 .list-item:hover {
-  /* TODO: Add hover styles for list items */
-  /* HINT: Change background-color */
+  background-color: #f0f8ff;
 }
 
 .list-item i {
-  /* TODO: Add icon styles in list items */
-  /* HINT: Use margin-right and color */
+  margin-right: 10px;
+  color: #555;
 }
 
 .list-item .avatar {
-  /* TODO: Add avatar styles in list items */
-  /* HINT: Use width, height, border-radius, margin-right, and object-fit */
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  margin-right: 10px;
+  object-fit: cover;
 }
-
-/* Form Styles */
 .form-group {
-  /* TODO: Add form group styles */
-  /* HINT: Add margin-bottom */
+  margin-bottom: 15px;
 }
 
 .form-label {
-  /* TODO: Add form label styles */
-  /* HINT: Use display, margin, and font-weight */
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 600;
 }
 
 .form-input {
-  /* TODO: Add form input styles */
-  /* HINT: Use width, padding, border, border-radius, font-size, transition */
+  width: 100%;
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+  transition: all 0.3s;
 }
 
 .form-input:focus {
-  /* TODO: Add focus styles for form inputs */
-  /* HINT: Use outline, border-color, and box-shadow */
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0,123,255,0.3);
 }
 
 .form-select {
-  /* TODO: Add form select styles */
-  /* HINT: Similar to form-input, with additional background-color */
+  width: 100%;
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+  background-color: #fff;
+  transition: all 0.3s;
 }
 
 .form-textarea {
-  /* TODO: Add textarea styles */
-  /* HINT: Similar to form-input, with additional min-height and resize properties */
+  width: 100%;
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+  min-height: 80px;
+  resize: vertical;
+  transition: all 0.3s;
 }
 
-/* Table Styles */
 .table-container {
-  /* TODO: Add table container styles */
-  /* HINT: Use overflow-x and margin */
+  overflow-x: auto;
+  margin: 15px 0;
 }
 
 .table {
-  /* TODO: Add table styles */
-  /* HINT: Use width, border-collapse, border-spacing */
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 
 .table th,
 .table td {
-  /* TODO: Add table cell styles */
-  /* HINT: Use padding, text-align, border-bottom */
+  padding: 10px 15px;
+  text-align: left;
+  border-bottom: 1px solid #eee;
 }
 
 .table th {
-  /* TODO: Add table header styles */
-  /* HINT: Use background-color, font-weight, cursor */
+  background-color: #f8f9fa;
+  font-weight: 600;
+  cursor: pointer;
 }
 
 .table th:hover {
-  /* TODO: Add hover styles for table headers */
-  /* HINT: Change background-color */
+  background-color: #e9ecef;
 }
 
 .table tr {
-  /* TODO: Add table row styles */
-  /* HINT: Use transition */
+  transition: background-color 0.3s;
 }
 
 .table tr:hover {
-  /* TODO: Add hover styles for table rows */
-  /* HINT: Change background-color with rgba for transparency */
+  background-color: rgba(0,123,255,0.05);
 }
 
-/* Badge Styles */
 .badge {
-  /* TODO: Add badge styles */
-  /* HINT: Use display, padding, border-radius, font-size, font-weight, and margin-left */
+  display: inline-block;
+  padding: 3px 8px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 600;
+  margin-left: 5px;
 }
 
 .badge-primary {
-  /* TODO: Add primary badge styles */
-  /* HINT: Use background-color and color */
+  background-color: #007bff;
+  color: #fff;
 }
 
 .badge-success {
-  /* TODO: Add success badge styles */
-  /* HINT: Use background-color and color */
+  background-color: #28a745;
+  color: #fff;
 }
 
 .badge-warning {
-  /* TODO: Add warning badge styles */
-  /* HINT: Use background-color and color */
+  background-color: #ffc107;
+  color: #212529;
 }
 
-/* Alert Styles */
 .alert {
-  /* TODO: Add alert styles */
-  /* HINT: Use padding, border-radius, margin-bottom, display, align-items, and justify-content */
+  padding: 10px 15px;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .alert i {
-  /* TODO: Add icon styles in alerts */
-  /* HINT: Use margin-right and font-size */
+  margin-right: 10px;
+  font-size: 16px;
 }
 
 .alert-content {
-  /* TODO: Add alert content styles */
-  /* HINT: Use display and align-items */
+  display: flex;
+  align-items: center;
 }
 
 .alert-close {
-  /* TODO: Add alert close button styles */
-  /* HINT: Use cursor and font-weight */
+  cursor: pointer;
+  font-weight: bold;
 }
 
 .alert-success {
-  /* TODO: Add success alert styles */
-  /* HINT: Use background-color, color, and border-left */
+  background-color: #d4edda;
+  color: #155724;
+  border-left: 5px solid #28a745;
 }
 
 .alert-warning {
-  /* TODO: Add warning alert styles */
-  /* HINT: Use background-color, color, and border-left */
+  background-color: #fff3cd;
+  color: #856404;
+  border-left: 5px solid #ffc107;
 }
 
 .alert-info {
-  /* TODO: Add info alert styles */
-  /* HINT: Use background-color, color, and border-left */
+  background-color: #d1ecf1;
+  color: #0c5460;
+  border-left: 5px solid #17a2b8;
 }
 
-/* Navigation Styles */
 .nav {
-  /* TODO: Add navigation styles */
-  /* HINT: Use display, background-color, border-radius, overflow, and margin-bottom */
+  display: flex;
+  background-color: #f8f9fa;
+  border-radius: 5px;
+  overflow: hidden;
+  margin-bottom: 15px;
 }
 
 .nav-item {
-  /* TODO: Add navigation item styles */
-  /* HINT: Use padding, color, text-decoration, transition */
+  padding: 10px 15px;
+  color: #333;
+  text-decoration: none;
+  transition: background-color 0.3s;
 }
 
 .nav-item:hover {
-  /* TODO: Add hover styles for nav items */
-  /* HINT: Change background-color */
+  background-color: #e9ecef;
 }
 
 .nav-item.active {
-  /* TODO: Add styles for active nav item */
-  /* HINT: Use background-color and font-weight */
+  background-color: #007bff;
+  font-weight: 600;
+  color: #fff;
 }
 
-/* Progress Bar Styles */
 .progress {
-  /* TODO: Add progress bar container styles */
-  /* HINT: Use height, background-color, border-radius, margin, and overflow */
+  height: 20px;
+  background-color: #e9ecef;
+  border-radius: 10px;
+  margin: 10px 0;
+  overflow: hidden;
 }
 
 .progress-bar {
-  /* TODO: Add progress bar styles */
-  /* HINT: Use height, border-radius, and transition */
+  height: 100%;
+  border-radius: 10px;
+  transition: width 0.4s ease;
 }
 
 .progress-primary {
-  /* TODO: Add primary progress bar styles */
-  /* HINT: Use background-color */
+  background-color: #007bff;
 }
 
 .progress-success {
-  /* TODO: Add success progress bar styles */
-  /* HINT: Use background-color */
+  background-color: #28a745;
 }
 
-/* Pagination Styles */
 .pagination {
-  /* TODO: Add pagination styles */
-  /* HINT: Use display, list-style, padding, and margin */
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 15px 0;
 }
 
 .page-item {
-  /* TODO: Add page item styles */
-  /* HINT: Use margin-right */
+  margin-right: 5px;
 }
 
 .page-link {
-  /* TODO: Add page link styles */
-  /* HINT: Use display, padding, border, border-radius, color, text-decoration, transition, and cursor */
+  display: block;
+  padding: 6px 12px;
+  border: 1px solid #dee2e6;
+  border-radius: 5px;
+  color: #007bff;
+  text-decoration: none;
+  transition: background-color 0.3s;
+  cursor: pointer;
 }
 
 .page-link:hover {
-  /* TODO: Add hover styles for page links */
-  /* HINT: Change background-color */
+  background-color: #e9ecef;
 }
 
 .page-item.active .page-link {
-  /* TODO: Add styles for active page link */
-  /* HINT: Use background-color, color, and border-color */
+  background-color: #007bff;
+  color: #fff;
+  border-color: #007bff;
 }
-
-/* Breadcrumb Styles */
 .breadcrumb {
-  /* TODO: Add breadcrumb styles */
-  /* HINT: Use display, list-style, padding, and margin */
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 10px 0;
 }
 
 .breadcrumb-item {
-  /* TODO: Add breadcrumb item styles */
-  /* HINT: Use display and align-items */
+  display: flex;
+  align-items: center;
 }
 
 .breadcrumb-item:not(:last-child)::after {
-  /* TODO: Add separator for breadcrumb items */
-  /* HINT: Use content, margin, and color */
+  content: "/";
+  margin: 0 5px;
+  color: #6c757d;
 }
 
 .breadcrumb-link {
-  /* TODO: Add breadcrumb link styles */
-  /* HINT: Use color, text-decoration, and cursor */
+  color: #007bff;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 .breadcrumb-link:hover {
-  /* TODO: Add hover styles for breadcrumb links */
-  /* HINT: Add text-decoration */
+  text-decoration: underline;
 }
 
 .breadcrumb-item.active {
-  /* TODO: Add styles for active breadcrumb item */
-  /* HINT: Use color */
+  color: #6c757d;
 }
 
-/* Modal Styles */
 .modal {
-  /* TODO: Add modal styles */
-  /* HINT: Use display, position, top/left, width, height, background-color, z-index, justify-content, and align-items */
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5);
+  z-index: 1000;
+  justify-content: center;
+  align-items: center;
 }
 
 .modal-content {
-  /* TODO: Add modal content styles */
-  /* HINT: Use background-color, border-radius, width, max-width, padding, and box-shadow */
+  background-color: #fff;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 500px;
+  padding: 20px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
 }
 
 .modal-header {
-  /* TODO: Add modal header styles */
-  /* HINT: Use display, justify-content, align-items, and margin-bottom */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
 }
 
 .modal-title {
-  /* TODO: Add modal title styles */
-  /* HINT: Use font-size and color */
+  font-size: 18px;
+  color: #333;
 }
 
 .modal-close {
-  /* TODO: Add modal close button styles */
-  /* HINT: Use background, border, font-size, cursor, and color */
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  color: #333;
 }
 
-/* Tooltip Styles */
 .tooltip {
-  /* TODO: Add tooltip styles */
-  /* HINT: Use position, display, border-bottom, and cursor */
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted #555;
+  cursor: pointer;
 }
 
 .tooltip .tooltip-text {
-  /* TODO: Add tooltip text styles */
-  /* HINT: Use visibility, width, background-color, color, text-align, border-radius, padding, position, z-index, bottom, left, margin-left, opacity, and transition */
+  visibility: hidden;
+  width: 140px;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  border-radius: 5px;
+  padding: 5px;
+  position: absolute;
+  z-index: 1001;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -70px;
+  opacity: 0;
+  transition: opacity 0.3s;
 }
 
 .tooltip .tooltip-text::after {
-  /* TODO: Add tooltip arrow styles */
-  /* HINT: Use content, position, top, left, margin-left, border-width, border-style, and border-color */
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #333 transparent transparent transparent;
 }
 
 .tooltip:hover .tooltip-text {
-  /* TODO: Add hover styles for tooltip */
-  /* HINT: Change visibility and opacity */
+  visibility: visible;
+  opacity: 1;
 }
 
-/* Accordion Styles */
 .accordion {
-  /* TODO: Add accordion styles */
-  /* HINT: Use margin */
+  margin: 15px 0;
 }
 
 .accordion-item {
-  /* TODO: Add accordion item styles */
-  /* HINT: Use border, border-radius, margin-bottom, and overflow */
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  overflow: hidden;
 }
 
 .accordion-header {
-  /* TODO: Add accordion header styles */
-  /* HINT: Use padding, background-color, cursor, display, justify-content, align-items, and font-weight */
+  padding: 10px 15px;
+  background-color: #f8f9fa;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 600;
 }
 
 .accordion-content {
-  /* TODO: Add accordion content styles */
-  /* HINT: Use padding, max-height, overflow, and transition */
+  padding: 0 15px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease, padding 0.3s ease;
 }
 
 .accordion-content.active {
-  /* TODO: Add styles for active accordion content */
-  /* HINT: Use padding and max-height */
+  padding: 10px 15px;
+  max-height: 500px; /* Adjust as needed */
 }
 
-/* Tabs Styles */
 .tabs {
-  /* TODO: Add tabs container styles */
-  /* HINT: Use margin */
+  margin: 15px 0;
 }
 
 .tab-header {
-  /* TODO: Add tab header styles */
-  /* HINT: Use display and border-bottom */
+  display: flex;
+  border-bottom: 2px solid #ddd;
 }
 
 .tab-link {
-  /* TODO: Add tab link styles */
-  /* HINT: Use padding, cursor, transition, and border-bottom */
+  padding: 10px 15px;
+  cursor: pointer;
+  transition: color 0.3s, border-bottom 0.3s;
+  border-bottom: 2px solid transparent;
 }
 
 .tab-link:hover {
-  /* TODO: Add hover styles for tab links */
-  /* HINT: Change color */
+  color: #007bff;
 }
 
 .tab-link.active {
-  /* TODO: Add styles for active tab link */
-  /* HINT: Use color and border-bottom */
+  color: #007bff;
+  border-bottom: 2px solid #007bff;
 }
 
 .tab-content {
-  /* TODO: Add tab content styles */
-  /* HINT: Use padding */
+  padding: 15px 0;
 }
 
 .tab-pane {
-  /* TODO: Add tab pane styles */
-  /* HINT: Use display property */
+  display: none;
 }
 
 .tab-pane.active {
-  /* TODO: Add styles for active tab pane */
-  /* HINT: Change display */
+  display: block;
 }
 
-/* Dropdown Styles */
 .dropdown {
-  /* TODO: Add dropdown styles */
-  /* HINT: Use position and display */
+  position: relative;
+  display: inline-block;
 }
 
 .dropdown-toggle {
-  /* TODO: Add dropdown toggle styles */
-  /* HINT: Use padding, background-color, color, border, border-radius, cursor, display, and align-items */
+  padding: 8px 12px;
+  background-color: #fff;
+  color: #333;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
 }
 
 .dropdown-toggle::after {
-  /* TODO: Add dropdown toggle indicator */
-  /* HINT: Use content, margin-left, and font-size */
+  content: "▼";
+  margin-left: 5px;
+  font-size: 10px;
 }
 
 .dropdown-menu {
-  /* TODO: Add dropdown menu styles */
-  /* HINT: Use position, top, left, background-color, border-radius, box-shadow, min-width, z-index, and display */
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+  min-width: 150px;
+  z-index: 1002;
+  display: none;
 }
 
 .dropdown-menu.show {
-  /* TODO: Add styles for visible dropdown menu */
-  /* HINT: Change display */
+  display: block;
 }
 
 .dropdown-item {
-  /* TODO: Add dropdown item styles */
-  /* HINT: Use padding, display, color, text-decoration, and transition */
+  padding: 8px 12px;
+  display: block;
+  color: #333;
+  text-decoration: none;
+  transition: background-color 0.3s;
 }
 
 .dropdown-item:hover {
-  /* TODO: Add hover styles for dropdown items */
-  /* HINT: Change background-color */
+  background-color: #f0f0f0;
 }
-
-/* Toast Styles */
 .toast-container {
-  /* TODO: Add toast container styles */
-  /* HINT: Use position, bottom, right, and z-index */
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1050;
 }
 
 .toast {
-  /* TODO: Add toast styles */
-  /* HINT: Use padding, background-color, border-radius, box-shadow, margin-bottom, display, align-items, justify-content, min-width, transform, opacity, and transition */
+  padding: 10px 15px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-width: 200px;
+  transform: translateX(100%);
+  opacity: 0;
+  transition: transform 0.4s, opacity 0.4s;
 }
 
 .toast.show {
-  /* TODO: Add styles for visible toast */
-  /* HINT: Use transform and opacity */
+  transform: translateX(0);
+  opacity: 1;
 }
 
 .toast-success {
-  /* TODO: Add success toast styles */
-  /* HINT: Use border-left */
+  border-left: 5px solid #28a745;
 }
 
 .toast-warning {
-  /* TODO: Add warning toast styles */
-  /* HINT: Use border-left */
+  border-left: 5px solid #ffc107;
 }
 
 .toast-close {
-  /* TODO: Add toast close button styles */
-  /* HINT: Use cursor and font-weight */
+  cursor: pointer;
+  font-weight: bold;
 }
-
-/* Code Editor Styles */
 .code-editor {
-  /* TODO: Add code editor styles */
-  /* HINT: Use background-color, border-radius, padding, margin, font-family, color, and overflow-x */
+  background-color: #1e1e1e;
+  border-radius: 5px;
+  padding: 15px;
+  margin: 15px 0;
+  font-family: 'Courier New', monospace;
+  color: #fff;
+  overflow-x: auto;
 }
 
 .code-comment {
-  /* TODO: Add code comment styles */
-  /* HINT: Use color */
+  color: #6a9955;
 }
 
 .code-selector {
-  /* TODO: Add code selector styles */
-  /* HINT: Use color */
+  color: #d7ba7d;
 }
 
 .code-property {
-  /* TODO: Add code property styles */
-  /* HINT: Use color */
+  color: #9cdcfe;
 }
 
 .code-value {
-  /* TODO: Add code value styles */
-  /* HINT: Use color */
+  color: #ce9178;
 }
 
-/* Theme Selector */
 .theme-selector {
-  /* TODO: Add theme selector styles */
-  /* HINT: Use position, top, right, and z-index */
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 2000;
 }
 
 .theme-btn {
-  /* TODO: Add theme button styles */
-  /* HINT: Use padding, background-color, color, border, border-radius, and cursor */
+  padding: 8px 12px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 }
-
-/* Animation Classes */
 .fade-in {
-  /* TODO: Add fade-in animation */
-  /* HINT: Use animation property */
-}
-
-.slide-in {
-  /* TODO: Add slide-in animation */
-  /* HINT: Use animation property */
-}
-
-.bounce {
-  /* TODO: Add bounce animation */
-  /* HINT: Use animation property */
+  animation: fadeIn 0.5s ease forwards;
 }
 
 @keyframes fadeIn {
-  /* TODO: Add fadeIn keyframes */
-  /* HINT: Define from and to states with opacity */
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.slide-in {
+  animation: slideIn 0.5s ease forwards;
 }
 
 @keyframes slideIn {
-  /* TODO: Add slideIn keyframes */
-  /* HINT: Define from and to states with transform and opacity */
+  from { transform: translateX(-100%); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+.bounce {
+  animation: bounce 0.6s ease infinite;
 }
 
 @keyframes bounce {
-  /* TODO: Add bounce keyframes */
-  /* HINT: Define keyframe percentages with transform */
+  0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+  40% { transform: translateY(-15px); }
+  60% { transform: translateY(-7px); }
 }
 
-/* Panel Header with close button */
 .panel-header {
-  /* TODO: Add panel header styles */
-  /* HINT: Use display, justify-content, align-items, margin-bottom, border-bottom, and padding-bottom */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 8px;
 }
 
 .panel-close {
-  /* TODO: Add panel close button styles */
-  /* HINT: Use background, border, font-size, cursor, color, and transition */
+  background: none;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+  color: #333;
+  transition: all 0.3s;
 }
 
 .panel-close:hover {
-  /* TODO: Add hover styles for panel close button */
-  /* HINT: Use color and transform */
+  color: #007bff;
+  transform: rotate(90deg);
 }
 
-/* Pull tab that appears on the left edge when panel is closed */
 .panel-pull-tab {
-  /* TODO: Add panel pull tab styles */
-  /* HINT: Use position, top, left, transform, background-color, color, padding, border-radius, cursor, box-shadow, z-index, display, align-items, justify-content, and transition */
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(-100%, -50%);
+  background-color: #007bff;
+  color: #fff;
+  padding: 8px 12px;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  z-index: 1050;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s;
 }
 
 .panel-pull-tab:hover {
-  /* TODO: Add hover styles for panel pull tab */
-  /* HINT: Use padding-right and background-color */
+  padding-right: 16px;
+  background-color: #0056b3;
 }
-
-/* Customization Panel */
 .customization-panel {
-  /* TODO: Add customization panel styles */
-  /* HINT: Use position, top, left, width, height, background-color, box-shadow, padding, overflow-y, transform, transition, and z-index */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 280px;
+  height: 100%;
+  background-color: #f8f9fa;
+  box-shadow: 2px 0 10px rgba(0,0,0,0.2);
+  padding: 15px;
+  overflow-y: auto;
+  transform: translateX(-100%);
+  transition: transform 0.4s ease;
+  z-index: 1040;
 }
 
 .customization-panel.open {
-  /* TODO: Add styles for open customization panel */
-  /* HINT: Use transform */
+  transform: translateX(0);
 }
 
 .panel-toggle {
-  /* TODO: Add panel toggle styles */
-  /* HINT: Use position, top, right, z-index, padding, background-color, color, border, border-radius, and cursor */
+  position: absolute;
+  top: 10px;
+  right: -40px;
+  z-index: 1051;
+  padding: 8px 12px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 }
-
 .color-option {
-  /* TODO: Add color option styles */
-  /* HINT: Use width, height, border-radius, display, margin, cursor, and border */
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: inline-block;
+  margin: 5px;
+  cursor: pointer;
+  border: 2px solid transparent;
 }
 
 .color-option.active {
-  /* TODO: Add active color option styles */
-  /* HINT: Use border-color */
+  border-color: #007bff;
 }
 
-/* Interactive Widgets */
 .interactive-widgets {
-  /* TODO: Add interactive widgets container styles */
-  /* HINT: Use display, grid-template-columns, gap, and margin-bottom */
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 15px;
+  margin-bottom: 20px;
 }
 
 .widget {
-  /* TODO: Add widget styles */
-  /* HINT: Use background-color, border-radius, box-shadow, padding, display, and transition */
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  padding: 10px 15px;
+  display: flex;
+  align-items: center;
+  transition: all 0.3s;
 }
 
 .widget:hover {
-  /* TODO: Add hover styles for widgets */
-  /* HINT: Use transform and box-shadow */
+  transform: translateY(-3px);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
 }
 
 .widget i {
-  /* TODO: Add widget icon styles */
-  /* HINT: Use font-size, color, and margin-right */
+  font-size: 20px;
+  color: #007bff;
+  margin-right: 10px;
 }
 
 .widget-content {
-  /* TODO: Add widget content styles */
-  /* HINT: Use flex property */
+  flex: 1;
 }
 
 .widget h3 {
-  /* TODO: Add widget heading styles */
-  /* HINT: Use margin-top, margin-bottom, color, and font-size */
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-  /* TODO: Add responsive styles for mobile */
-  /* HINT: Adjust component-grid, btn-group, nav, and tab-header */
-
+  margin-top: 0;
+  margin-bottom: 5px;
+  color: #333;
+  font-size: 16px;
+}@media (max-width: 768px) {
   .component-grid {
-    /* Change grid to single column */
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
   }
 
   .btn-group {
-    /* Stack buttons vertically */
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
   }
 
   .nav {
-    /* Make nav items stack vertically */
+    flex-direction: column;
   }
 
   .tab-header {
-    /* Make tab links stack vertically */
+    flex-direction: column;
   }
 }
 
-/* ========== PRESERVED WIDGET STYLES ========== */
-
-/* Clock Widget */
-#clock {
+.clock {
   font-size: 2rem;
   font-weight: 600;
   color: var(--primary);
